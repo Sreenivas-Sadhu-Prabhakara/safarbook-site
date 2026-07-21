@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SafarBook — trip booking &amp; dispatch board for taxi &amp; travel operators</title>
+  <meta name="description" content="Book trips, assign a driver and vehicle, track advance and balance, and print a duty slip — all on one daily dispatch board. Built for Indian taxi and travel (tours/cab) operators. Book a discovery call." />
+  <meta name="keywords" content="taxi dispatch software, travel operator app, trip booking software, driver vehicle assignment, duty slip, cab booking dispatch board, advance balance tracking, tours and travels software India" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <link rel="canonical" href="https://sreenivas-sadhu-prabhakara.github.io/safarbook-site/" />
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="author" content="KARYA" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KARYA" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:title" content="SafarBook — trip booking &amp; dispatch board for taxi &amp; travel operators" />
+  <meta property="og:description" content="Book trips, assign a driver and vehicle, track advance and balance, and print a duty slip — all on one daily dispatch board. Built for Indian taxi and travel operators." />
+  <meta property="og:url" content="https://sreenivas-sadhu-prabhakara.github.io/safarbook-site/" />
+  <meta property="og:image" content="https://sreenivas-sadhu-prabhakara.github.io/safarbook-site/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="SafarBook — book a trip, assign a driver and vehicle, track advance and balance, and print a duty slip on a daily dispatch board." />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SafarBook — trip booking &amp; dispatch board for taxi &amp; travel operators" />
+  <meta name="twitter:description" content="Book trips, assign a driver and vehicle, track advance and balance, and print a duty slip — all on one daily dispatch board. Built for Indian taxi and travel operators." />
+  <meta name="twitter:image" content="https://sreenivas-sadhu-prabhakara.github.io/safarbook-site/og.png" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="https://sreenivas-sadhu-prabhakara.github.io/safarbook-site/og.png" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://kaarya-bench.pages.dev/#org",
+        "name": "KARYA",
+        "url": "https://kaarya-bench.pages.dev/",
+        "email": "sreeni.nintendo@gmail.com"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://sreenivas-sadhu-prabhakara.github.io/safarbook-site/#website",
+        "url": "https://sreenivas-sadhu-prabhakara.github.io/safarbook-site/",
+        "name": "SafarBook",
+        "inLanguage": "en-IN",
+        "publisher": { "@id": "https://kaarya-bench.pages.dev/#org" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "SafarBook",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://sreenivas-sadhu-prabhakara.github.io/safarbook-site/",
+        "image": "https://sreenivas-sadhu-prabhakara.github.io/safarbook-site/og.png",
+        "description": "A dispatch book for Indian taxi and travel operators — book a trip, assign a driver and vehicle, track advance and balance, print a duty slip, and work a live daily dispatch board of today's trips, unassigned queue, ongoing duties and pending balances.",
+        "inLanguage": ["en-IN", "hi-IN"],
+        "areaServed": { "@type": "Country", "name": "India" },
+        "audience": { "@type": "BusinessAudience" },
+        "provider": { "@type": "Organization", "name": "KARYA" },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "description": "Subscription — pricing shared on a discovery call"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does it send the booking confirmation and duty slip itself?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SafarBook drafts every message — the customer's booking confirmation, the payment note when money comes in, and the driver's duty slip — and stages it in your outbox. You send from your own number with a tap, so it always looks like it came from your office, not a robot."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We take cash advances and UPI on the way back. Does that work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Record an advance when the booking is made and record the balance when the driver collects it — cash or UPI, doesn't matter. SafarBook keeps the balance = fare minus advance up to date, so you always know exactly what each driver has to collect."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a duty slip and does the driver need it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A duty slip is the numbered paper the driver carries for a trip: the guest, the route, the trip type, and exactly how much balance to collect. SafarBook prints it from the trip detail and queues a copy to the driver, so nobody argues about the amount at drop-off."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does setup take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An afternoon. You add your drivers and vehicles once, then start booking trips. The dispatch board is populated from day one — today's trips, who still needs a driver, what's ongoing, and every pending balance across the book."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does it cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pricing is worked out on a quick discovery call and billed monthly on subscription. We are keeping public prices off the page while we onboard our first operators."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "KARYA · On the Bench",
+            "item": "https://kaarya-bench.pages.dev/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "SafarBook",
+            "item": "https://sreenivas-sadhu-prabhakara.github.io/safarbook-site/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="SafarBook home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" role="img" aria-label="SafarBook logo">
+            <rect x="3" y="4" width="26" height="24" rx="3" fill="#2563eb"/>
+            <rect x="3" y="4" width="7" height="24" rx="3" fill="#1d4ed8"/>
+            <path d="M14 10h11M14 16h11M14 22h7" stroke="#EEF2FB" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand__name">Safar<span class="brand__book">Book</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#problem">The problem</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#preview">Dispatch board</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <a href="mailto:sreeni.nintendo@gmail.com?subject=Discovery%20call%20—%20SafarBook" class="btn btn--sm">Book a discovery call</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Trip booking &amp; dispatch, on one board</p>
+          <h1 class="hero__title" id="hero-title">Every car out,<br /><span class="accent-word">every rupee tracked.</span></h1>
+          <p class="hero__pain">
+            At 7am five cars have to leave at once — and the whole plan lives in a
+            diary and a WhatsApp group. SafarBook turns that into a book →
+            assign → advance/balance → duty-slip cycle, on a live dispatch board.
+          </p>
+          <div class="hero__cta">
+            <a href="#pricing" class="btn btn--lg">Work today's board &rarr;</a>
+            <a href="#how" class="btn-link">See how it works</a>
+          </div>
+          <p class="hero__note"><span class="dot"></span>For taxi &amp; travel operators with a handful of drivers · subscription · pricing on discovery</p>
+        </div>
+
+        <!-- SIGNATURE WIDGET: live dispatch board -->
+        <aside class="register" aria-label="Live dispatch board demo">
+          <div class="register__head">
+            <div>
+              <p class="register__label">Dispatch board</p>
+              <p class="register__month" id="reg-month">Sun · 19 Jul 2026</p>
+            </div>
+            <span class="register__pill">Live</span>
+          </div>
+          <ul class="register__rows" id="reg-rows">
+            <li class="reg-row" data-state="paid">
+              <span class="reg-row__name">Mehta family <em><span class="reg-row__code">TRV-118</span> · Mumbai → Lonavala · outstation</em></span>
+              <span class="reg-row__amt">₹6,800</span>
+              <span class="reg-row__tag tag--paid">Completed</span>
+            </li>
+            <li class="reg-row" data-state="due">
+              <span class="reg-row__name">S. Iyer <em><span class="reg-row__code">TRV-124</span> · Andheri → T2 airport · airport</em></span>
+              <span class="reg-row__amt">₹1,150</span>
+              <span class="reg-row__tag tag--due" id="reg-live-tag">Needs a driver</span>
+            </li>
+            <li class="reg-row" data-state="overdue">
+              <span class="reg-row__name">Sharma &amp; co. <em><span class="reg-row__code">TRV-121</span> · Bandra → Pune · outstation</em></span>
+              <span class="reg-row__amt">₹4,200 due</span>
+              <span class="reg-row__tag tag--over">Balance pending</span>
+            </li>
+          </ul>
+          <div class="register__foot">
+            <div class="regstat">
+              <span class="regstat__label">Collected today</span>
+              <span class="regstat__val regstat__val--in" id="reg-collected">₹11,000</span>
+            </div>
+            <div class="regstat">
+              <span class="regstat__label">Balance out</span>
+              <span class="regstat__val regstat__val--out" id="reg-pending">₹5,350</span>
+            </div>
+          </div>
+          <p class="register__caption" id="reg-caption">Assign Raju + MH-01-AB-4521 to TRV-124 → duty slip goes to his phone.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="section" id="problem" aria-label="The problem">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">01 · The problem</p>
+        <div class="two-col">
+          <h2 class="section__title">You run the cars.<br />The juggling runs you.</h2>
+          <div class="prose">
+            <p>
+              If you dispatch a handful of cabs out of Andheri or run a tours-and-travels
+              desk in Pune, nobody handed you an operations system. Your board is a
+              <strong>paper diary, a WhatsApp group, and your own memory</strong> — and
+              at rush hour all three break down at once.
+            </p>
+          </div>
+        </div>
+
+        <div class="pain-grid">
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">🗒️</span>
+            <h3>The diary can't tell you who's free</h3>
+            <p>A new booking comes in and you flip pages to work out which driver and which car are actually free at 6pm. Sometimes you double-book the same Innova.</p>
+          </div>
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">💬</span>
+            <h3>WhatsApp is not a dispatch board</h3>
+            <p>Trip details, driver replies and "reached, sir" pings are scattered across a group. By afternoon nobody can say what's still unassigned or ongoing.</p>
+          </div>
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">💸</span>
+            <h3>Advance in, balance forgotten</h3>
+            <p>The advance was taken at booking; the balance is meant to be collected at drop-off. Some drivers collect, some forget, and the ledger is a scrap of paper.</p>
+          </div>
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">🧾</span>
+            <h3>"Sir, how much to collect?"</h3>
+            <p>The driver calls from the road to ask the fare and the balance. Without a duty slip in his hand, the amount at drop-off is whatever he remembers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSIGHT ============ -->
+    <section class="insight" id="insight" aria-label="The insight">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--light">02 · The insight</p>
+        <blockquote class="insight__quote">
+          The bookings are known <span class="hl">a day ahead</span> — same cars,
+          same drivers, a fare on every trip. Only the <span class="hl">juggling</span>
+          is manual, and it's the juggling that drops the ball.
+        </blockquote>
+        <p class="insight__punch">
+          SafarBook's whole job is to put that juggling on one screen: <strong>book the
+          trip, assign the driver and car, track the advance and balance, print the
+          duty slip</strong> — so at 7am the board shows every car out and every rupee
+          tracked, without anyone reconstructing it from WhatsApp.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="how" aria-label="How it works">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">03 · How it works</p>
+        <h2 class="section__title">Book it. Assign it. Collect it. The board keeps score.</h2>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__n">1</span>
+            <div>
+              <h3>Book a trip</h3>
+              <p>Customer, from → to, date, type (local / outstation / airport / rental), fare and advance. A booking confirmation is queued to the customer the moment it's saved.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">2</span>
+            <div>
+              <h3>Assign a driver + vehicle</h3>
+              <p>Attach a car and driver from your fleet. The trip moves to <em>assigned</em> on the board, and each driver's load for the day is visible at a glance.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">3</span>
+            <div>
+              <h3>Track advance / balance, print the duty slip</h3>
+              <p>Record money as it comes in; the balance falls automatically. Print a numbered duty slip — route, guest and exactly how much to collect — and it's queued to the driver.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">4</span>
+            <div>
+              <h3>Work the daily dispatch board</h3>
+              <p>Today's trips, the needs-a-driver queue, ongoing duties, completed today, and every pending balance across the book — one screen, always current.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section section--tint" id="features" aria-label="What's inside">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">04 · What's inside</p>
+        <h2 class="section__title">The whole dispatch day, in one book.</h2>
+
+        <div class="feat-grid">
+          <article class="feat">
+            <h3>Trip booking</h3>
+            <p>Customer, from → to, date, trip type and fare — booked in seconds, with the advance captured and a confirmation queued to the guest.</p>
+          </article>
+          <article class="feat">
+            <h3>Driver &amp; vehicle assignment</h3>
+            <p>Attach a car and driver from your fleet. No double-booking the same vehicle — you see who and what is free before you commit.</p>
+          </article>
+          <article class="feat">
+            <h3>Advance &amp; balance tracking</h3>
+            <p>Balance is always fare minus advance, clamped at zero. Record each payment as it lands and a payment note is queued automatically.</p>
+          </article>
+          <article class="feat">
+            <h3>Numbered duty slips</h3>
+            <p>Print the driver's slip for a trip — route, guest, trip type and exactly how much balance to collect — and queue a copy to his phone.</p>
+          </article>
+          <article class="feat">
+            <h3>Daily dispatch board</h3>
+            <p>Today's trips, unassigned queue, ongoing duties, completed today, pending balances and each driver's load — all on one live screen.</p>
+          </article>
+          <article class="feat">
+            <h3>Outbox for every message</h3>
+            <p>Booking confirmations, payment notes and duty slips are drafted to your outbox — sent from your own number, so it reads like your office.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT PREVIEW ============ -->
+    <section class="section" id="preview" aria-label="The dispatch board">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">05 · The dispatch board</p>
+        <h2 class="section__title">Open it at 7am. See the whole day in ten seconds.</h2>
+
+        <div class="screen" role="img" aria-label="SafarBook dispatch board preview for Sunday 19 July 2026, showing 12 trips today, 1 unassigned, 3 ongoing, and 5,350 rupees of balance still to collect, with a list of today's trips.">
+          <!-- browser chrome -->
+          <div class="screen__bar">
+            <span class="screen__dot"></span><span class="screen__dot"></span><span class="screen__dot"></span>
+            <span class="screen__url">localhost:8132 / Sagar Travels</span>
+          </div>
+
+          <div class="screen__body">
+            <div class="screen__topline">
+              <div>
+                <p class="screen__hello">Namaste, Sagar bhai</p>
+                <p class="screen__sub">Sagar Travels · 5 drivers · 5 vehicles · Sun 19 Jul 2026</p>
+              </div>
+              <span class="screen__tag">Dispatch board &middot; live</span>
+            </div>
+
+            <!-- KPI cards -->
+            <div class="kpis">
+              <div class="kpi kpi--in">
+                <p class="kpi__label">Trips today</p>
+                <p class="kpi__val">12</p>
+                <div class="kpi__bar"><span style="width:75%"></span></div>
+                <p class="kpi__meta">3 ongoing right now</p>
+              </div>
+              <div class="kpi kpi--out">
+                <p class="kpi__label">Needs a driver</p>
+                <p class="kpi__val">1</p>
+                <div class="kpi__bar kpi__bar--out"><span style="width:12%"></span></div>
+                <p class="kpi__meta">TRV-124 · T2 airport</p>
+              </div>
+              <div class="kpi kpi--out">
+                <p class="kpi__label">Balance out</p>
+                <p class="kpi__val">₹5,350</p>
+                <div class="kpi__bar kpi__bar--out"><span style="width:33%"></span></div>
+                <p class="kpi__meta">across 3 trips</p>
+              </div>
+              <div class="kpi kpi--go">
+                <p class="kpi__label">Completed today</p>
+                <p class="kpi__val">4</p>
+                <div class="kpi__bar kpi__bar--go"><span style="width:60%"></span></div>
+                <p class="kpi__meta">₹11,000 collected</p>
+              </div>
+            </div>
+
+            <!-- trips table -->
+            <div class="tablecard">
+              <div class="tablecard__head">
+                <p>Today's trips</p>
+                <span class="tablecard__hint">duty slips auto-queued</span>
+              </div>
+              <div class="tablescroll">
+                <table class="dtable">
+                  <thead>
+                    <tr>
+                      <th>Trip</th><th>Route</th><th>Driver · Car</th><th class="num">Balance</th><th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>TRV-118</td><td>Mumbai → Lonavala</td>
+                      <td>Raju · MH-01-AB-4521</td><td class="num">0</td>
+                      <td><span class="s s--paid">Completed</span></td>
+                    </tr>
+                    <tr>
+                      <td>TRV-121</td><td>Bandra → Pune</td>
+                      <td>Imran · MH-02-CD-7788</td><td class="num">4,200</td>
+                      <td><span class="s s--over">Balance pending</span></td>
+                    </tr>
+                    <tr>
+                      <td>TRV-123</td><td>Powai → BKC (local)</td>
+                      <td>Suresh · MH-01-EF-1290</td><td class="num">650</td>
+                      <td><span class="s s--go">Ongoing</span></td>
+                    </tr>
+                    <tr>
+                      <td>TRV-124</td><td>Andheri → T2 airport</td>
+                      <td>— unassigned —</td><td class="num">1,150</td>
+                      <td><span class="s s--due">Needs a driver</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section section--tint" id="pricing" aria-label="Pricing">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">06 · Pricing</p>
+        <div class="price-wrap">
+          <div class="price-copy">
+            <h2 class="section__title">Simple subscription. However many cars you run.</h2>
+            <p class="prose">
+              If SafarBook catches <strong>one uncollected balance a week</strong> that
+              would otherwise have walked off at drop-off, it's already paid for itself —
+              and you've stopped rebuilding the day's plan from a WhatsApp group every morning.
+            </p>
+            <ul class="price-includes">
+              <li>Unlimited trips, drivers &amp; vehicles</li>
+              <li>Book → assign → advance/balance → duty slip</li>
+              <li>Live daily dispatch board + driver loads</li>
+              <li>Outbox for confirmations, payment notes &amp; duty slips</li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <p class="price-card__eyebrow">SafarBook</p>
+            <p class="price-card__amt">Pricing — on discovery</p>
+            <p class="price-card__line">Subscription basis</p>
+            <p class="prose" style="color:color-mix(in srgb, var(--paper) 82%, transparent);margin:0 0 22px;">
+              We set pricing on a short discovery call and bill it as a simple monthly
+              subscription — sized to how many cars you run. Early operators get founder terms.
+            </p>
+            <a href="mailto:sreeni.nintendo@gmail.com?subject=Discovery%20call%20—%20SafarBook" class="btn btn--lg btn--block">Book a discovery call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHO + FAQ ============ -->
+    <section class="section" id="faq" aria-label="Who it's for and frequently asked questions">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">07 · Who it's for &amp; questions</p>
+        <div class="who-grid">
+          <div class="who">
+            <h2 class="section__title section__title--sm">Built for the local operator, not the aggregator.</h2>
+            <p class="prose">
+              SafarBook is for the operator with <strong>a handful of drivers and cars</strong> —
+              a cab fleet in Andheri, a tours-and-travels desk in Pune, an airport-run
+              operation with five Innovas. Big enough that the juggling eats your mornings;
+              small enough that a fleet-management suite is overkill. If you run it on a
+              diary and a WhatsApp group today, this is for you.
+            </p>
+            <div class="who-tags">
+              <span>Taxi &amp; cab operators</span>
+              <span>Tours &amp; travels desks</span>
+              <span>Airport-run fleets</span>
+              <span>3–30 vehicles</span>
+            </div>
+          </div>
+
+          <div class="faq">
+            <details open>
+              <summary>Does it send the booking confirmation and duty slip itself?</summary>
+              <p>SafarBook drafts every message — the customer's booking confirmation, the payment note when money comes in, and the driver's duty slip — and stages it in your outbox. You send from your own number with a tap, so it always looks like it came from your office, not a robot.</p>
+            </details>
+            <details>
+              <summary>We take cash advances and UPI on the way back. Does that work?</summary>
+              <p>Yes. Record an advance when the booking is made and record the balance when the driver collects it — cash or UPI, doesn't matter. SafarBook keeps the balance = fare minus advance up to date, so you always know exactly what each driver has to collect.</p>
+            </details>
+            <details>
+              <summary>What is a duty slip and does the driver need it?</summary>
+              <p>A duty slip is the numbered paper the driver carries for a trip: the guest, the route, the trip type, and exactly how much balance to collect. SafarBook prints it from the trip detail and queues a copy to the driver, so nobody argues about the amount at drop-off.</p>
+            </details>
+            <details>
+              <summary>How long does setup take?</summary>
+              <p>An afternoon. You add your drivers and vehicles once, then start booking trips. The dispatch board is populated from day one — today's trips, who still needs a driver, what's ongoing, and every pending balance across the book.</p>
+            </details>
+            <details>
+              <summary>What does it cost?</summary>
+              <p>Pricing is worked out on a quick discovery call and billed monthly on subscription. We're keeping public prices off the page while we onboard our first operators.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="24" height="24" role="img" aria-label="SafarBook logo">
+              <rect x="3" y="4" width="26" height="24" rx="3" fill="#2563eb"/>
+              <rect x="3" y="4" width="7" height="24" rx="3" fill="#1d4ed8"/>
+              <path d="M14 10h11M14 16h11M14 22h7" stroke="#EEF2FB" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand__name">Safar<span class="brand__book">Book</span></span>
+        </span>
+        <p class="footer__tag">Every car out, every rupee tracked.</p>
+      </div>
+      <div class="footer__meta">
+        <p class="footer__studio">A <strong>KARYA</strong> studio build</p>
+        <a class="footer__mail" href="mailto:sreeni.nintendo@gmail.com">sreeni.nintendo@gmail.com</a>
+        <p class="footer__fine">© 2026 SafarBook · Made in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
